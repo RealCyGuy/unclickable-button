@@ -1,0 +1,26 @@
+body {
+  background-color: #a7ff83;
+}
+.warning, .warning-text {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+.warning {
+  font-size: 50px;
+}
+button {
+  position: fixed;
+  padding: 5px;
+  background-color: #17b978;
+  color: #0a4c52;
+  border: 0;
+  font-size: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 15px 3px #82ecc2;
+}
+button:hover {
+  cursor: pointer;
+}
