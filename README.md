@@ -1,4 +1,4 @@
-# Unclickable button(?)
+# Unclickable(?) button
 
 > Makes an unclickable button by moving when hovered, requiring javascript, redirecting when devtools is open, setting the tabindex to -1 (un-tabable), not working with touch screens, enforcing minimum height and width, and preventDefault-ing key presses (like enter key).
 
