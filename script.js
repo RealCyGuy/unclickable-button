@@ -1,4 +1,4 @@
-PRODUCTION = false; // set to false if editing to use dev tools
+PRODUCTION = true; // set to false if editing to use dev tools
 
 $(function () {
   if ("ontouchstart" in document.documentElement) {
