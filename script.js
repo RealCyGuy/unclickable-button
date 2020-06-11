@@ -1,9 +1,17 @@
-// const PRODUCTION = true; // set to false if editing to use dev tools
+const PRODUCTION = true; // set to false if editing to use dev tools
+
+function small() {
+  return $(window).width() < 500 || $(window).height() < 500
+}
 
 $(function () {
   if ("ontouchstart" in document.documentElement) {
     $("body").prepend(
       "<h1 class='warning'>No touch screen devices allowed.</h1><p class='warning-text'>Or you could just press it. >:(</p>"
+    );
+  } else if (small()) {
+    $("body").prepend(
+      "<h1 class='warning'>Screen too small.</h1><p class='warning-text'>Too small, too bad.</p>"
     );
   } else {
     /* Stop context menu */
@@ -38,6 +46,12 @@ $(function () {
         left: "50%",
         transform: "translate(-50%, -50%)",
       });
+      if (small()) {
+        $("button, .warning, .warning-text").remove();
+        $("body").prepend(
+          "<h1 class='warning'>Resized too small.</h1><p class='warning-text'>Tried to limit button movement?</p>"
+        );
+      }
     });
     /* Stop enter key and such */
     $(document).on("keypress", function (e) {
